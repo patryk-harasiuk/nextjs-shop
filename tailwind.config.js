@@ -1,13 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
-  variants: {
-    extend: { cursor: ['hover', 'focus'] },
-  },
-  content: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/forms')],
+  variants: {
+    extend: { cursor: ['hover', 'focus'] },
+  },
+  plugins: [],
 };
