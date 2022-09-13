@@ -1,20 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { signIn, signOut, useSession } from 'next-auth/react';
+
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   const { data: session, status } = useSession();
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Jobs App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
         {!session && (
           <>
@@ -31,8 +27,6 @@ const Home: NextPage = () => {
           </>
         )}
       </main>
-
-      <footer className={styles.footer}>Powered by Pragmatic Reviews</footer>
     </div>
   );
 };

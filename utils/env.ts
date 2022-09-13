@@ -17,5 +17,3 @@ export function getEnv(name: keyof Envs): Envs[keyof Envs] {
 
   return value;
 }
-
-console.log(getEnv('GITHUB_ID_DEV'), 'GITHUB IDD');
