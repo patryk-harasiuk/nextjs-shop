@@ -19,7 +19,6 @@ const Home: NextPage = () => {
         {status === 'authenticated' && (
           <Layout>
             <h1>Signed in as {session.user?.name} </h1> <br />
-            <h2>pee pee poo poo</h2>
             <button onClick={() => signOut()}>Sign out</button>
           </Layout>
         )}
