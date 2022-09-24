@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      title: ['Creepster', 'sans-serif'],
+    extend: {
+      fontFamily: {
+        title: ['Creepster', 'sans-serif'],
+      },
+      colors: {
+        textGrey: '#656565',
+      },
     },
   },
   variants: {

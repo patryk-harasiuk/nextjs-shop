@@ -1,13 +1,12 @@
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import { PrismaClient } from '@prisma/client';
 import NextAuth from 'next-auth';
 import GithubProvider from 'next-auth/providers/github';
 
+import prisma from '../../../utils/client';
 import { getEnv } from '../../../utils/env';
 
-const prisma = new PrismaClient();
-
 export default NextAuth({
+  adapter: PrismaAdapter(prisma),
   providers: [
     GithubProvider({
       clientId: getEnv('GITHUB_ID_DEV'),
@@ -20,5 +19,4 @@ export default NextAuth({
   session: {
     strategy: 'jwt',
   },
-  adapter: PrismaAdapter(prisma),
 });
