@@ -14,7 +14,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
+      "eslint --cache-location './node_modules/@eslint/.eslintcache/' --fix",
       "prettier --write"
     ],
     "*.{json,md,yaml,yml,scss,css}": [

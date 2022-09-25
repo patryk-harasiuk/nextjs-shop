@@ -20,9 +20,11 @@ const Navbar = () => {
 
         <ul className="flex gap-8">
           {navLinks.map((navLink, index) => (
-            <Link href={navLink.path} key={index}>
-              <li className="cursor-pointer">{navLink.name}</li>
-            </Link>
+            <li className="cursor-pointer" key={index}>
+              <Link href={navLink.path} key={index}>
+                <a>{navLink.name}</a>
+              </Link>
+            </li>
           ))}
           <li className="cursor-pointer">Cart</li>
         </ul>
