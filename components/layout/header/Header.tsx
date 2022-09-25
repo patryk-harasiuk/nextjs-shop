@@ -2,12 +2,14 @@ import useAuth from '../../../hooks/useAuth/useAuth';
 
 const Header = () => {
   return (
-    <header className="bg-slate-300">
-      {/* user icon */}
+    <header className="bg-slate-300 font-main">
+      <div className="w-full flex justify-between items-center px-16 py-1">
+        <p className="text-xs">icon</p>
 
-      <div className="flex justify-center items-center">nextjs-shop</div>
+        <p className="text-xs">nextjs-shop</p>
 
-      {/* some kind of search icon? */}
+        <p className="text-xs">icon</p>
+      </div>
     </header>
   );
 };

@@ -1,5 +1,6 @@
-import Navbar from '../navbar/Navbar';
+import Footer from './footer/Footer';
 import Header from './header/Header';
+import Navbar from './navbar/Navbar';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -10,7 +11,8 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Header />
       <Navbar />
-      {children}
+      <main className="h-full w-full">{children}</main>
+      <Footer />
     </>
   );
 };

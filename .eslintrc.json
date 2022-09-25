@@ -28,7 +28,9 @@
   },
   "rules": {
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/anchor-has-content": "off"
   },
   "parserOptions": {
     "ecmaVersion": 12,

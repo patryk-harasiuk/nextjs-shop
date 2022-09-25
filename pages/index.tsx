@@ -8,21 +8,21 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <main>
-        {!session && (
-          <>
-            <h1>You are not signed in</h1> <br />
-            <button onClick={() => signIn('github')}>Sign in</button>
-          </>
-        )}
+      {!session && (
+        <>
+          <h1>You are not signed in</h1> <br />
+          <button onClick={() => signIn('github')}>Sign in</button>
+        </>
+      )}
 
-        {status === 'authenticated' && (
-          <Layout>
+      {status === 'authenticated' && (
+        <Layout>
+          <div className="min-h-screen">
             <h1>Signed in as {session.user?.name} </h1> <br />
-            <button onClick={() => signOut()}>Sign out</button>
-          </Layout>
-        )}
-      </main>
+          </div>
+          <button onClick={() => signOut()}>Sign out</button>
+        </Layout>
+      )}
     </div>
   );
 };

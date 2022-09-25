@@ -5,9 +5,11 @@ module.exports = {
     extend: {
       fontFamily: {
         title: ['Creepster', 'sans-serif'],
+        main: ['Questrial', 'sans-serif'],
       },
       colors: {
         textGrey: '#656565',
+        pinkLight: '#ffcee3',
       },
     },
   },
