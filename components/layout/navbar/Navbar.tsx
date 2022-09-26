@@ -14,7 +14,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <nav className="block border border-slate-300 font-main">
+    <nav className="block border-b border-slate-300 font-main">
       <div className="flex justify-between items-center px-16 py-4">
         <h4 className="text-4xl font-title">nextjs-shop</h4>
 
