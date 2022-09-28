@@ -1,12 +1,25 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import useAuth from '../../../hooks/useAuth/useAuth';
 
 const Header = () => {
+  // const {signOut} = useAuth();
+
   return (
     <header className="bg-slate-300 font-main">
       <div className="w-full flex justify-between items-center px-16 py-1">
-        <Image src={'/user-icon.png'} alt="user" width="24px" height="24px" />
+        <Link href={'/account'}>
+          <a>
+            <Image
+              className="cursor-pointer"
+              src={'/user-icon.png'}
+              alt="user"
+              width="24px"
+              height="24px"
+            />
+          </a>
+        </Link>
 
         <p className="text-xs">nextjs-shop</p>
 
