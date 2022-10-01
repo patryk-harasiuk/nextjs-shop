@@ -1,10 +1,8 @@
 import { GetServerSideProps } from 'next';
-import { unstable_getServerSession } from 'next-auth/next';
 
 import Layout from '../components/layout/Layout';
 import useAuth from '../hooks/useAuth/useAuth';
 import requireAuth from '../utils/require-auth';
-import { authOptions } from './api/auth/[...nextauth]';
 
 const UserProfile = () => {
   const { signOut } = useAuth();
