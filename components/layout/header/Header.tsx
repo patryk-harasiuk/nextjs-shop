@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-slate-300 font-main">
       <div className="w-full flex justify-between items-center px-16 py-1">
         <Link href={'/account'}>
-          <a>
+          <a className="h-6">
             <Image
               className="cursor-pointer"
               src={'/user-icon.png'}
