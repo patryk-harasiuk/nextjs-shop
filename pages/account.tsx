@@ -3,6 +3,7 @@ import { unstable_getServerSession } from 'next-auth/next';
 
 import Layout from '../components/layout/Layout';
 import useAuth from '../hooks/useAuth/useAuth';
+import requireAuth from '../utils/require-auth';
 import { authOptions } from './api/auth/[...nextauth]';
 
 const UserProfile = () => {
@@ -40,20 +41,7 @@ const UserProfile = () => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = await unstable_getServerSession(context.req, context.res, authOptions);
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: `/signin?return_url=${encodeURIComponent(context.resolvedUrl)}`,
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: { session },
-  };
+  return requireAuth(context);
 };
 
 export default UserProfile;
