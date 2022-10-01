@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import { GetServerSideProps } from 'next';
 import { unstable_getServerSession } from 'next-auth/next';
 
 import Layout from '../components/layout/Layout';
@@ -7,6 +7,7 @@ import { authOptions } from './api/auth/[...nextauth]';
 
 const UserProfile = () => {
   const { signOut } = useAuth();
+  const signOutHandler = () => signOut({ callbackUrl: '/' });
 
   return (
     <Layout>
@@ -16,7 +17,7 @@ const UserProfile = () => {
 
           <button
             className="p-[10px] rounded-sm bg-textGrey hover:bg-slate-700 text-white text-xs uppercase"
-            onClick={() => signOut()}
+            onClick={signOutHandler}
           >
             log out
           </button>
@@ -44,7 +45,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   if (!session) {
     return {
       redirect: {
-        destination: '/signin',
+        destination: `/signin?return_url=${encodeURIComponent(context.resolvedUrl)}`,
         permanent: false,
       },
     };
