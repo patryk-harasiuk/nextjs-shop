@@ -5,6 +5,7 @@ type Envs = {
   readonly NEXTAUTH_URL: string;
   readonly GITHUB_ID_DEV: string;
   readonly GITHUB_SECRET_DEV: string;
+  readonly NEXT_PUBLIC_BASE_URL: string;
 };
 
 export function getEnv<Env extends keyof Envs>(name: Env): Envs[Env];

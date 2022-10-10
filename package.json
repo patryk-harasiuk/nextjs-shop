@@ -31,11 +31,14 @@
     "@sentry/nextjs": "^6.15.0",
     "@stripe/react-stripe-js": "^1.6.0",
     "@stripe/stripe-js": "^1.21.1",
+    "@tanstack/react-query-devtools": "^4.11.0",
+    "axios": "^1.1.2",
     "next": "^12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-query": "^3.39.2",
     "stripe": "^8.190.0",
-    "yup": "^0.32.11"
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@headlessui/react": "^1.4.2",

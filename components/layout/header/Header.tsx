@@ -1,11 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import useAuth from '../../../hooks/useAuth/useAuth';
-
 const Header = () => {
-  // const {signOut} = useAuth();
-
   return (
     <header className="bg-slate-300 font-main">
       <div className="w-full flex justify-between items-center px-16 py-1">
