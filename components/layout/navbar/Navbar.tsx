@@ -14,7 +14,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 w-full border-b border-slate-300 font-main">
+    <nav className="bg-white sticky w-full z-20 top-0 left-0 border-b border-slate-300 font-main">
       <div className="flex justify-between items-center px-16 py-4">
         <Link href={'/'}>
           <a>

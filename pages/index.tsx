@@ -13,10 +13,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <div className="min-h-screen">
-        <h2>MAIN PAGE</h2>
-        <ProductsList products={products.data} />
-      </div>
+      <ProductsList products={products.data} />
     </Layout>
   );
 };
