@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css';
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { CartProvider } from 'features/cart/context/cart-context';
 import type { AppProps } from 'next/app';
 import { SessionProvider } from 'next-auth/react';
 import { useState } from 'react';
@@ -11,10 +12,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <ReactQueryDevtools /> */}
+      <ReactQueryDevtools />
       <SessionProvider session={pageProps.session}>
         <Hydrate state={pageProps.dehydratedState}>
-          <Component {...pageProps} />
+          <CartProvider>
+            <Component {...pageProps} />
+          </CartProvider>
         </Hydrate>
       </SessionProvider>
     </QueryClientProvider>
