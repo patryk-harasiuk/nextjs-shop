@@ -14,6 +14,7 @@ module.exports = {
       colors: {
         textGrey: '#656565',
         pinkLight: '#ffcee3',
+        pink: 'rgb(214, 6, 141);',
       },
     },
   },
