@@ -1,5 +1,6 @@
-import { createContext } from 'react';
+import { createContext, useMemo, useReducer } from 'react';
 
+import { cartReducer } from './reducers/cart-reducer';
 import { Action, State } from './types';
 
 type Dispatch = (action: Action) => void;
@@ -13,5 +14,9 @@ export const CartStateContext = createContext<{ state: State; dispatch: Dispatch
 const initialState: State = { products: [], totalPrice: 0, isOpen: false };
 
 export const CartProvider = ({ children }: CartProviderProps) => {
-  <CartStateContext.Provider value={null}>{children}</CartStateContext.Provider>;
+  const [state, dispatch] = useReducer(cartReducer, initialState);
+
+  const value = useMemo(() => ({ state, dispatch }), [state]);
+
+  return <CartStateContext.Provider value={value}>{children}</CartStateContext.Provider>;
 };
