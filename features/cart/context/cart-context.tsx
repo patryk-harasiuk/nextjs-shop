@@ -1,4 +1,4 @@
-import { createContext, memo, useMemo, useReducer } from 'react';
+import { createContext, useMemo, useReducer } from 'react';
 
 import { cartReducer } from './reducers/cart-reducer';
 import { Action, State } from './types';
@@ -13,7 +13,7 @@ export const CartStateContext = createContext<{ state: State; dispatch: Dispatch
   undefined,
 );
 
-const initialState: State = { products: [], totalPrice: 0, isOpen: false };
+const initialState: State = { products: [], totalPrice: 0, isOpen: true };
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);

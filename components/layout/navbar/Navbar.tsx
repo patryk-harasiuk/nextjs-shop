@@ -1,3 +1,4 @@
+import Checkout from 'features/cart/components/checkout/checkout';
 import Link from 'next/link';
 
 const navLinks = [
@@ -14,7 +15,8 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <nav className="bg-white sticky w-full z-20 top-0 left-0 border-b border-slate-300 font-main">
+    <nav className="bg-white sticky w-full z-10 top-0 left-0 border-b border-slate-300 font-main">
+      {<Checkout />}
       <div className="flex justify-between items-center px-16 py-4">
         <Link href={'/'}>
           <a>

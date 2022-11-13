@@ -10,7 +10,6 @@ const CartItem = (product: CartItemProps) => {
       </div>
       <div className="ml-4 flex-1 flex flex-col">
         <div className="flex justify-between text-base font-medium text-gray-900">
-          {/* <h3></h3> */}
           <p className="ml-4"></p>
         </div>
         <div className="flex-1 flex items-end justify-between text-sm">
