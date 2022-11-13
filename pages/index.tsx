@@ -1,6 +1,6 @@
 import { getProducts } from 'features/products/api/get-products';
 import ProductsList from 'features/products/components/products-list/products-list';
-import { useGetProducts } from 'features/products/hooks/useGetProducts';
+import { useGetProducts } from 'features/products/hooks/use-get-products';
 import type { GetServerSideProps, NextPage } from 'next';
 import { dehydrate, QueryClient } from 'react-query';
 

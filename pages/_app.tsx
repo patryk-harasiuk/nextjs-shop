@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
       <SessionProvider session={pageProps.session}>
         <Hydrate state={pageProps.dehydratedState}>
           <CartProvider>
