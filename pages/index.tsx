@@ -1,3 +1,4 @@
+import Checkout from 'features/cart/components/checkout/checkout';
 import { getProducts } from 'features/products/api/get-products';
 import ProductsList from 'features/products/components/products-list/products-list';
 import { useGetProducts } from 'features/products/hooks/use-get-products';
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <ProductsList products={products.data} />
+      <Checkout />
     </Layout>
   );
 };
