@@ -1,4 +1,5 @@
-import 'tailwindcss/tailwind.css';
+// import 'tailwindcss/tailwind.css';
+import 'styles/global.css';
 
 import { CartProvider } from 'features/cart/context/cart-context';
 import type { AppProps } from 'next/app';

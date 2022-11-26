@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer components {
+  #__next {
+    @apply min-height: 100%;
+  }
+} */
+
 @layer utilities {
   input[type='number']::-webkit-inner-spin-button,
   input[type='number']::-webkit-outer-spin-button {
@@ -19,6 +25,12 @@ body {
   text-rendering: optimizeLegibility;
   font-family: -apple-system, BlinkMacSystem, 'Segoe UI', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+@layer components {
+  #__next {
+    @apply h-full;
+  }
 }
 
 a {
