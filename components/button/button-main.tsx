@@ -1,10 +1,14 @@
 type ButtonMainProps = {
   children: React.ReactNode | string;
+  onClick?: () => void;
 };
 
-const ButtonMain = ({ children }: ButtonMainProps) => {
+const ButtonMain = ({ children, onClick }: ButtonMainProps) => {
   return (
-    <button className="text-center uppercase text-xs bg-pink py-3 px-6 text-white font-main rounded-md">
+    <button
+      onClick={onClick}
+      className="text-center uppercase text-xs bg-pink py-3 px-6 text-white font-main rounded-md"
+    >
       {children}
     </button>
   );
