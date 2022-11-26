@@ -11,12 +11,11 @@ const Checkout = () => {
     dispatch,
   } = useCart();
 
-  const handleOpenMenu = () => dispatch({ type: 'openMenu' });
   const handleCloseMenu = () => dispatch({ type: 'closeMenu' });
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog as="div" className="fixed z-20 inset-0 overflow-hidden" onClose={handleOpenMenu}>
+      <Dialog as="div" className="fixed z-20 inset-0 overflow-hidden" onClose={handleCloseMenu}>
         <div className="absolute   inset-0 overflow-hidden">
           <Transition.Child
             as={Fragment}
@@ -45,7 +44,7 @@ const Checkout = () => {
                   <div className="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
                     <div className="flex items-start justify-between">
                       <Dialog.Title className="text-lg font-medium text-gray-900">
-                        Koszyk
+                        Cart
                       </Dialog.Title>
                       <div className="ml-3 h-7 flex items-center">
                         <button
@@ -53,7 +52,7 @@ const Checkout = () => {
                           className="-m-2 p-2 text-gray-400 hover:text-gray-500"
                           onClick={handleCloseMenu}
                         >
-                          <span className="sr-only">Zamknij</span>
+                          <span className="sr-only">Close</span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </button>
                       </div>
@@ -64,14 +63,14 @@ const Checkout = () => {
                   </div>
                   <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
-                      <p>Razem:</p>
+                      <p>Total:</p>
                       <p>{totalPrice / 100} zł</p>
                     </div>
 
                     <div className="mt-6">
                       {products.length > 0 ? (
                         <button className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                          Do kasy
+                          To checkout
                         </button>
                       ) : null}
                     </div>

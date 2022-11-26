@@ -15,7 +15,7 @@ const CartItem = (product: CartItemProps) => {
         <div className="flex-1 flex items-end justify-between text-sm">
           <div className="flex">
             <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
-              Usuń
+              Remove
             </button>
           </div>
         </div>
