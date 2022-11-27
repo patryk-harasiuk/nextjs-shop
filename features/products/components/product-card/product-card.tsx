@@ -10,7 +10,10 @@ type ProductCardProps = Product;
 const ProductCard = (product: ProductCardProps) => {
   const { dispatch } = useCart();
 
-  const handleAddToCart = () => dispatch({ type: 'addProduct', payload: product });
+  const handleAddToCart = () => {
+    console.log('am i running');
+    dispatch({ type: 'addProduct', payload: product });
+  };
 
   return (
     <article className="group relative">
