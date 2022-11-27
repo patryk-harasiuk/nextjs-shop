@@ -11,8 +11,8 @@ const ProductCard = (product: ProductCardProps) => {
   const { dispatch } = useCart();
 
   const handleAddToCart = () => {
-    console.log('am i running');
     dispatch({ type: 'addProduct', payload: product });
+    dispatch({ type: 'openMenu' });
   };
 
   return (
