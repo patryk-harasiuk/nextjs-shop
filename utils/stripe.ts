@@ -5,7 +5,7 @@ import * as z from 'zod';
 import { getEnv } from './env';
 
 export const redirectToCheckout = async (session: Pick<Stripe.Checkout.Session, 'id'>) => {
-  const stripe = await loadStripe(getEnv('NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'));
+  const stripe = await loadStripe(process.env['NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'] as string);
 
   return stripe!.redirectToCheckout({
     sessionId: session.id,

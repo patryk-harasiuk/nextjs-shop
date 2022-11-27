@@ -20,7 +20,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(200).json({ id });
     res.end();
-  } catch {
+  } catch (err) {
+    console.log(err, 'ERRR');
     res.status(500);
   }
 };

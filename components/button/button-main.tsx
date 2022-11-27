@@ -1,6 +1,6 @@
 type ButtonMainProps = {
   children: React.ReactNode | string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
 const ButtonMain = ({ children, onClick }: ButtonMainProps) => {

@@ -4,12 +4,14 @@ import { useGetProducts } from 'features/products/hooks/use-get-products';
 import type { GetServerSideProps, NextPage } from 'next';
 import { dehydrate, QueryClient } from 'react-query';
 
+import { getEnv } from '@/utils/env';
+
 import Layout from '../components/layout/Layout';
 
 const Home: NextPage = () => {
   const products = useGetProducts();
 
-  console.log(products.data, 'products');
+  console.log(process.env['NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'] as string);
 
   return (
     <Layout>

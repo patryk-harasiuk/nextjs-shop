@@ -8,7 +8,7 @@ const products: Prisma.Product[] = [
     id: '1',
     description: '',
     name: 'Plant on vase',
-    price: 2,
+    price: 20000,
     image: '/plant-1.jpg',
   },
 
@@ -16,7 +16,7 @@ const products: Prisma.Product[] = [
     id: '2',
     description: '',
     name: 'White plant',
-    price: 2,
+    price: 10000,
     image: '/plant-2.jpg',
   },
 
@@ -24,7 +24,7 @@ const products: Prisma.Product[] = [
     id: '3',
     description: '',
     name: 'Wavy plant',
-    price: 2,
+    price: 25000,
     image: '/plant-3.jpg',
   },
 
@@ -32,7 +32,7 @@ const products: Prisma.Product[] = [
     id: '4',
     description: '',
     name: 'Red plant',
-    price: 2,
+    price: 30000,
     image: '/plant-4.jpg',
   },
 ];
