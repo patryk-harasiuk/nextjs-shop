@@ -44,6 +44,6 @@ export async function makeRequest<Schema extends ZodSchema | null>(
   } catch (error) {
     if (error instanceof ResponseError || error instanceof ZodError) throw error;
 
-    throw new ResponseError('Something went wrong during fetchin...');
+    throw new ResponseError('Something went wrong during fetching...');
   }
 }

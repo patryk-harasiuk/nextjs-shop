@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 import useCart from 'features/cart/hooks/use-cart';
-import { Dispatch, Fragment, SetStateAction } from 'react';
+import { Fragment } from 'react';
 
 import CartList from '../cart-list/cart-list';
 
@@ -13,10 +13,12 @@ const Checkout = () => {
 
   const handleCloseMenu = () => dispatch({ type: 'closeMenu' });
 
+  console.log(isOpen, 'isOpen');
+
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="fixed z-20 inset-0 overflow-hidden" onClose={handleCloseMenu}>
-        <div className="absolute   inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <Transition.Child
             as={Fragment}
             enter="ease-in-out duration-500"

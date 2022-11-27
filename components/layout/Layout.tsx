@@ -1,3 +1,5 @@
+import Checkout from 'features/cart/components/checkout/checkout';
+
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import Navbar from './navbar/Navbar';
@@ -11,6 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Header />
       <Navbar />
+      <Checkout />
       <main className="min-h-full pt-20 pb-28 bg-white flex-col items-center justify-center">
         {children}
       </main>
