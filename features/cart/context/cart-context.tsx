@@ -18,8 +18,6 @@ const initialState: State = { products: [], totalPrice: 0, isOpen: false };
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  console.log(state, 'state');
-
   const memoizedValue = useMemo(() => ({ state, dispatch }), [state]);
 
   return <CartStateContext.Provider value={memoizedValue}>{children}</CartStateContext.Provider>;

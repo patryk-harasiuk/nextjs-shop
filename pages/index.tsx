@@ -11,8 +11,6 @@ import Layout from '../components/layout/Layout';
 const Home: NextPage = () => {
   const products = useGetProducts();
 
-  console.log(process.env['NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'] as string);
-
   return (
     <Layout>
       <ProductsList products={products.data} />

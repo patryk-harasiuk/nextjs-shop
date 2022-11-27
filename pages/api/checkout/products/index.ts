@@ -21,7 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(200).json({ id });
     res.end();
   } catch (err) {
-    console.log(err, 'ERRR');
+    console.log(err);
     res.status(500);
   }
 };
