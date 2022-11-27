@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 import useCart from 'features/cart/hooks/use-cart';
+import { useCheckout } from 'features/cart/hooks/use-checkout';
 import { Fragment } from 'react';
 
 import CartList from '../cart-list/cart-list';
@@ -11,9 +12,11 @@ const Checkout = () => {
     dispatch,
   } = useCart();
 
+  const { mutate } = useCheckout();
+
   const handleCloseMenu = () => dispatch({ type: 'closeMenu' });
 
-  console.log(isOpen, 'isOpen');
+  const handleCheckout = () => mutate(products);
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
@@ -71,7 +74,10 @@ const Checkout = () => {
 
                     <div className="mt-6">
                       {products.length > 0 ? (
-                        <button className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        <button
+                          onClick={handleCheckout}
+                          className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                        >
                           To checkout
                         </button>
                       ) : null}
